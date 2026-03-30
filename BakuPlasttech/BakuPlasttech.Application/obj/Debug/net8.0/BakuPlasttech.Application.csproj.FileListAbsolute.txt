@@ -1,0 +1,17 @@
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlasttech.Application.deps.json
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlasttech.Application.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlasttech.Application.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlasttech.Domain.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlasttech.Domain.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.csproj.AssemblyReference.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.AssemblyInfoInputs.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.AssemblyInfo.cs
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\refint\BakuPlasttech.Application.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\ref\BakuPlasttech.Application.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlastTech.Contract.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlastTech.Contract.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlas.FE3EE112.Up2Date

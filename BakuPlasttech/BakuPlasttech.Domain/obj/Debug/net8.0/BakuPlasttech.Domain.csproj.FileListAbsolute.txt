@@ -1,0 +1,12 @@
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\bin\Debug\net8.0\BakuPlasttech.Domain.deps.json
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\bin\Debug\net8.0\BakuPlasttech.Domain.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\bin\Debug\net8.0\BakuPlasttech.Domain.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.csproj.AssemblyReference.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.AssemblyInfoInputs.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.AssemblyInfo.cs
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\refint\BakuPlasttech.Domain.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\ref\BakuPlasttech.Domain.dll

@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="BakuPlasttech.API/BakuPlasttech.API.csproj" />
+  <Project Path="BakuPlasttech.Application/BakuPlasttech.Application.csproj" />
+  <Project Path="BakuPlasttech.Contract/BakuPlasttech.Contract.csproj" />
+  <Project Path="BakuPlasttech.Domain/BakuPlasttech.Domain.csproj" />
+  <Project Path="BakuPlasttech.Infrastructure/BakuPlasttech.Infrastructure.csproj" />
+  <Project Path="BakuPlasttech.Persistence/BakuPlasttech.Persistence.csproj" />
+</Solution>

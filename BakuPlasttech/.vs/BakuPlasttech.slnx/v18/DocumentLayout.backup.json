@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|solutionrelative:bakuplasttech.application\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFA5EF2-8C43-71F8-D4E5-B92D928E5520}|BakuPlasttech.Contract\\BakuPlasttech.Contract.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.contract\\dtos\\category\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFA5EF2-8C43-71F8-D4E5-B92D928E5520}|BakuPlasttech.Contract\\BakuPlasttech.Contract.csproj|solutionrelative:bakuplasttech.contract\\dtos\\category\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EFA5EF2-8C43-71F8-D4E5-B92D928E5520}|BakuPlasttech.Contract\\BakuPlasttech.Contract.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.contract\\dtos\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EFA5EF2-8C43-71F8-D4E5-B92D928E5520}|BakuPlasttech.Contract\\BakuPlasttech.Contract.csproj|solutionrelative:bakuplasttech.contract\\dtos\\product\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.application\\services\\inquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|solutionrelative:bakuplasttech.application\\services\\inquiryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.application\\bakuplasttech.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7B0D4300-E05B-7F86-11A2-39164E5BA3AB}|BakuPlasttech.Application\\BakuPlasttech.Application.csproj|solutionrelative:bakuplasttech.application\\bakuplasttech.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91CACEBD-5248-B8D4-7DD0-ED2B0389B142}|BakuPlasttech.Persistence\\BakuPlasttech.Persistence.csproj|c:\\users\\ravan999\\desktop\\bakuplasttech\\bakuplasttech\\bakuplasttech.persistence\\migrations\\20260330114456_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91CACEBD-5248-B8D4-7DD0-ED2B0389B142}|BakuPlasttech.Persistence\\BakuPlasttech.Persistence.csproj|solutionrelative:bakuplasttech.persistence\\migrations\\20260330114456_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Contract\\DTOs\\Category\\CategoryCreateDto.cs",
+              "RelativeDocumentMoniker": "BakuPlasttech.Contract\\DTOs\\Category\\CategoryCreateDto.cs",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Contract\\DTOs\\Category\\CategoryCreateDto.cs",
+              "RelativeToolTip": "BakuPlasttech.Contract\\DTOs\\Category\\CategoryCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:13:11.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Contract\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeDocumentMoniker": "BakuPlasttech.Contract\\DTOs\\Product\\ProductCreateDto.cs",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Contract\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeToolTip": "BakuPlasttech.Contract\\DTOs\\Product\\ProductCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:13:10.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "BakuPlasttech.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "BakuPlasttech.Application\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:59:09.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BakuPlasttech.Application",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\BakuPlasttech.Application.csproj",
+              "RelativeDocumentMoniker": "BakuPlasttech.Application\\BakuPlasttech.Application.csproj",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\BakuPlasttech.Application.csproj",
+              "RelativeToolTip": "BakuPlasttech.Application\\BakuPlasttech.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-30T12:02:15.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InquiryService.cs",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\Services\\InquiryService.cs",
+              "RelativeDocumentMoniker": "BakuPlasttech.Application\\Services\\InquiryService.cs",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Application\\Services\\InquiryService.cs",
+              "RelativeToolTip": "BakuPlasttech.Application\\Services\\InquiryService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:59:23.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260330114456_First.cs",
+              "DocumentMoniker": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Persistence\\Migrations\\20260330114456_First.cs",
+              "RelativeDocumentMoniker": "BakuPlasttech.Persistence\\Migrations\\20260330114456_First.cs",
+              "ToolTip": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Persistence\\Migrations\\20260330114456_First.cs",
+              "RelativeToolTip": "BakuPlasttech.Persistence\\Migrations\\20260330114456_First.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T11:44:56.797Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
