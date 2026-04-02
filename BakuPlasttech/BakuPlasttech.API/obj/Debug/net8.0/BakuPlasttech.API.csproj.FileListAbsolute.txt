@@ -160,8 +160,9 @@ C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\obj\Debu
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\BakuPlastTech.Contract.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\BakuPlastTech.Contract.pdb
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\obj\Debug\net8.0\BakuPlasttech.API.sourcelink.json
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.API\bin\Debug\net8.0\BakuPlasttech.API.staticwebassets.runtime.json

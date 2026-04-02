@@ -10,3 +10,4 @@ C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\D
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\refint\BakuPlasttech.Domain.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.pdb
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\ref\BakuPlasttech.Domain.dll
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Domain\obj\Debug\net8.0\BakuPlasttech.Domain.sourcelink.json

@@ -1,0 +1,374 @@
+/* About Page Styles */
+.about-page {
+  padding-top: 80px;
+  background-color: var(--color-bg-primary);
+}
+
+/* 2. Company Intro */
+.company-intro {
+  padding: 100px 0;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.intro-image {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.intro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.intro-image:hover img {
+  transform: scale(1.05);
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-label {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 24px;
+}
+
+.intro-title {
+  font-size: 48px;
+  margin-bottom: 32px;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+
+.intro-text-block p {
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+/* 3. Mission & Vision */
+.mission-vision {
+  padding: 100px 0;
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mv-card {
+  padding: 60px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+
+.mv-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-5px);
+}
+
+.mv-icon {
+  margin-bottom: 32px;
+  color: var(--color-accent);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-secondary);
+}
+
+.mv-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: var(--font-display);
+}
+
+.mv-desc {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* 4. Core Values */
+.core-values {
+  padding: 100px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.value-card {
+  padding: 40px 32px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-primary);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  background-color: var(--color-bg-secondary);
+}
+
+.value-icon {
+  color: var(--color-accent);
+  margin-bottom: 24px;
+}
+
+.value-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.value-desc {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* 5. Production Excellence */
+.production-excellence {
+  padding: 100px 0;
+  background-color: #0D0D0D;
+  color: #FFFFFF;
+}
+
+.pe-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.pe-content h2 {
+  color: #FFFFFF;
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+
+.pe-desc {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  margin-bottom: 48px;
+}
+
+.pe-features {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pe-feature-item {
+  display: flex;
+  gap: 24px;
+}
+
+.pe-feature-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(227, 6, 19, 0.1);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pe-feature-item h4 {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+}
+
+.pe-feature-item p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+}
+
+.pe-image {
+  box-shadow: 0 0 50px rgba(227, 6, 19, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 6. Stats Section */
+.about-stats {
+  padding: 80px 0;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-number {
+  font-size: 56px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.stat-label {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+/* 7. Industries */
+.industries {
+  padding: 100px 0;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.industry-card {
+  padding: 48px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.industry-card:hover {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-accent);
+}
+
+.industry-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+}
+
+.industry-desc {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* 8. Certification Strip */
+.certification-strip {
+  padding: 40px 0;
+  background-color: var(--color-bg-nav);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.cert-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.cert-text {
+  font-family: var(--font-display);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cert-items {
+  display: flex;
+  gap: 32px;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.cert-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .intro-grid, .mv-grid, .pe-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+  }
+  .intro-title, .inner-hero-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .values-grid, .industries-grid {
+    grid-template-columns: 1fr;
+  }
+  .cert-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cert-items {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

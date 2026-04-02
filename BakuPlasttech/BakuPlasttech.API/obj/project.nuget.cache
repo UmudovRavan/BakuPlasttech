@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ckfQkesCToo=",
+  "dgSpecHash": "8xFOrchGgyE=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.API\\BakuPlasttech.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ravan999\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
-    "C:\\Users\\Ravan999\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -95,18 +94,5 @@
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.24\\microsoft.netcore.app.host.win-x64.8.0.24.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 16.1.1 was resolved.",
-      "projectPath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.API\\BakuPlasttech.API.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.API\\BakuPlasttech.API.csproj",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

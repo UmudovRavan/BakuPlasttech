@@ -1,4 +1,5 @@
 using BakuPlastTech.Application.Extensions;
+using BakuPlastTech.Application.Mapping;
 using BakuPlastTech.Domain.Entities;
 using BakuPlastTech.Infrastructure.Extensions;
 using BakuPlastTech.Persistence.Contexts;
@@ -10,7 +11,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// ================= AutoMapper =================
+builder.Services.AddAutoMapper(opt =>
+{
+    opt.AddProfile(new GeneralProfile());
+});
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {

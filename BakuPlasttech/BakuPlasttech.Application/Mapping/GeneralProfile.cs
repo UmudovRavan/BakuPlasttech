@@ -1,3 +1,4 @@
+using System.Linq;
 using AutoMapper;
 using BakuPlastTech.Contract.DTOs.Category;
 using BakuPlastTech.Contract.DTOs.Inquiry;
@@ -16,7 +17,9 @@ public class GeneralProfile : Profile
         CreateMap<CategoryUpdateDto, Category>();
 
         // Product Mappings
-        CreateMap<Product, ProductDto>().ReverseMap();
+        CreateMap<Product, ProductDto>()
+            .ForMember(dest => dest.ImageUrls, opt => opt.MapFrom(src => src.Images.Select(i => i.Url).ToList()))
+            .ReverseMap();
         CreateMap<ProductCreateDto, Product>();
         CreateMap<ProductUpdateDto, Product>();
 

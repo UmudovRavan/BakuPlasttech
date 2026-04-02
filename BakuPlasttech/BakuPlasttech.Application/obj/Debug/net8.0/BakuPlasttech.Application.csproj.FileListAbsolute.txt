@@ -15,3 +15,4 @@ C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlastTech.Contract.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\bin\Debug\net8.0\BakuPlastTech.Contract.pdb
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlas.FE3EE112.Up2Date
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Application\obj\Debug\net8.0\BakuPlasttech.Application.sourcelink.json

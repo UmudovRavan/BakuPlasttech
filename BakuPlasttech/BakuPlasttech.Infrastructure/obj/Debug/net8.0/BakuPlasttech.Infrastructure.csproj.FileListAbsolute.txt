@@ -17,3 +17,4 @@ C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlastTech.Infrastructu
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Infrastructure\obj\Debug\net8.0\BakuPlas.83515DB4.Up2Date
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Infrastructure\bin\Debug\net8.0\BakuPlastTech.Contract.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Infrastructure\bin\Debug\net8.0\BakuPlastTech.Contract.pdb
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Infrastructure\obj\Debug\net8.0\BakuPlasttech.Infrastructure.sourcelink.json

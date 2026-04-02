@@ -33,7 +33,7 @@ public class ProductService : IProductService
     {
         try
         {
-            var products = await _productRepository.GetAll(false).ToListAsync();
+            var products = await _productRepository.GetAll(false).Include(p => p.Images).ToListAsync();
             return _mapper.Map<IEnumerable<ProductDto>>(products);
         }
         catch (Exception ex)
@@ -47,7 +47,7 @@ public class ProductService : IProductService
     {
         try
         {
-            var product = await _productRepository.GetByIdAsync(id, false);
+            var product = await _productRepository.GetWhere(p => p.Id == id, false).Include(p => p.Images).FirstOrDefaultAsync();
             return product == null ? null : _mapper.Map<ProductDto>(product);
         }
         catch (Exception ex)
@@ -61,7 +61,7 @@ public class ProductService : IProductService
     {
         try
         {
-            var product = await _productRepository.GetWhere(p => p.Slug == slug, false).FirstOrDefaultAsync();
+            var product = await _productRepository.GetWhere(p => p.Slug == slug, false).Include(p => p.Images).FirstOrDefaultAsync();
             return product == null ? null : _mapper.Map<ProductDto>(product);
         }
         catch (Exception ex)
@@ -75,7 +75,7 @@ public class ProductService : IProductService
     {
         try
         {
-            var products = await _productRepository.GetWhere(p => p.IsFeatured && p.IsActive, false).ToListAsync();
+            var products = await _productRepository.GetWhere(p => p.IsFeatured && p.IsActive, false).Include(p => p.Images).ToListAsync();
             return _mapper.Map<IEnumerable<ProductDto>>(products);
         }
         catch (Exception ex)

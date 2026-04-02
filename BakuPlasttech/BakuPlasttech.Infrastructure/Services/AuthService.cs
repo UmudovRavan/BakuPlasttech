@@ -48,7 +48,7 @@ public class AuthService : IAuthService
             }
 
             _logger.LogInformation("İstifadəçi uğurla daxil oldu: {Username}", loginDto.Username);
-            return CreateToken(user);
+            return await CreateTokenAsync(user); // ✅ async
         }
         catch (Exception ex)
         {
@@ -57,30 +57,40 @@ public class AuthService : IAuthService
         }
     }
 
-    private TokenDto CreateToken(AppUser user)
+
+    private async Task<TokenDto> CreateTokenAsync(AppUser user)
+{
+    // ✅ Rolları gətir
+    var roles = await _userManager.GetRolesAsync(user);
+
+    var authClaims = new List<Claim>
     {
-        var authClaims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Name, user.UserName ?? string.Empty),
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-        };
+        new Claim(ClaimTypes.Name, user.UserName ?? string.Empty),
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+    };
 
-        var jwtKey = _configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key is missing in appsettings.json");
-        var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
-
-        var token = new JwtSecurityToken(
-            issuer: _configuration["Jwt:Issuer"],
-            audience: _configuration["Jwt:Audience"],
-            expires: DateTime.UtcNow.AddHours(3), // Token 3 saatlıqdır
-            claims: authClaims,
-            signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
-        );
-
-        return new TokenDto
-        {
-            AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
-            Expiration = token.ValidTo
-        };
+    // ✅ Rolları token-ə əlavə et
+    foreach (var role in roles)
+    {
+        authClaims.Add(new Claim(ClaimTypes.Role, role));
     }
+
+    var jwtKey = _configuration["Jwt:Key"] ?? throw new InvalidOperationException("JWT Key is missing in appsettings.json");
+    var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+
+    var token = new JwtSecurityToken(
+        issuer: _configuration["Jwt:Issuer"],
+        audience: _configuration["Jwt:Audience"],
+        expires: DateTime.UtcNow.AddHours(3),
+        claims: authClaims,
+        signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
+    );
+
+    return new TokenDto
+    {
+        AccessToken = new JwtSecurityTokenHandler().WriteToken(token),
+        Expiration = token.ValidTo
+    };
+}
 }

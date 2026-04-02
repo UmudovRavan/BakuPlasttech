@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BakuPlasttech.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d896380b87e19d38fc03a13e7a2d1f29e342e57c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BakuPlasttech.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BakuPlasttech.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

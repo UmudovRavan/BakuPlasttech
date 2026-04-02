@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg-base: #0d0d0d;
+  --color-bg-surface: #141414;
+  --color-bg-elevated: #1c1c1c;
+  --color-bg-hover: #222222;
+
+  --color-border: rgba(255,255,255,0.07);
+  --color-border-strong: rgba(255,255,255,0.14);
+
+  --color-accent: #E8192C;
+  --color-accent-hover: #c41524;
+  --color-accent-muted: rgba(232,25,44,0.12);
+
+  --color-text-primary: #EBEBEB;
+  --color-text-secondary: #888888;
+  --color-text-muted: #555555;
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #E8192C;
+
+  --font-main: 'Inter', sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+}
+
+.admin-panel-container {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-main);
+  min-height: 100vh;
+}
+
+/* Button Variants */
+.admin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-main);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+.admin-btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+}
+.admin-btn-primary:hover {
+  background-color: var(--color-accent-hover);
+}
+.admin-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-btn-ghost {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: white;
+}
+.admin-btn-ghost:hover {
+  border-color: var(--color-border-strong);
+}
+
+.admin-btn-danger {
+  background-color: transparent;
+  border: 1px solid rgba(232, 25, 44, 0.4);
+  color: var(--color-danger);
+}
+.admin-btn-danger:hover {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.admin-btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+}
+.admin-btn-icon:hover {
+  background-color: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+/* Input Styles */
+.admin-input {
+  background-color: #0a0a0a;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-family: var(--font-main);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.admin-input:focus {
+  border-color: var(--color-accent);
+}
+
+/* Typography styles */
+.admin-page-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.admin-section-heading {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+}
+.admin-body-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+.admin-muted-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}

@@ -10,3 +10,4 @@ C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Contract\obj
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Contract\obj\Debug\net8.0\BakuPlasttech.Contract.pdb
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Contract\obj\Debug\net8.0\ref\BakuPlasttech.Contract.dll
 C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Contract\obj\Debug\net8.0\BakuPlasttech.Contract.csproj.AssemblyReference.cache
+C:\Users\Ravan999\Desktop\BakuPlasttech\BakuPlasttech\BakuPlasttech.Contract\obj\Debug\net8.0\BakuPlasttech.Contract.sourcelink.json

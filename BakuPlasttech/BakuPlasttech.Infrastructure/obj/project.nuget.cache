@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CsHroFlbhqs=",
+  "dgSpecHash": "W+wnBG7GcHc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Infrastructure\\BakuPlasttech.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ravan999\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
-    "C:\\Users\\Ravan999\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.25\\microsoft.aspnetcore.authentication.jwtbearer.8.0.25.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.25\\microsoft.aspnetcore.cryptography.internal.8.0.25.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.25\\microsoft.aspnetcore.cryptography.keyderivation.8.0.25.nupkg.sha512",
@@ -36,18 +35,5 @@
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.24\\microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
     "C:\\Users\\Ravan999\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.24\\microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 16.1.1 was resolved.",
-      "projectPath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Infrastructure\\BakuPlasttech.Infrastructure.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Ravan999\\Desktop\\BakuPlasttech\\BakuPlasttech\\BakuPlasttech.Infrastructure\\BakuPlasttech.Infrastructure.csproj",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

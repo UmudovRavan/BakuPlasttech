@@ -16,4 +16,5 @@ public class ProductDto
     public string? Specifications { get; set; }
     public bool IsActive { get; set; }
     public bool IsFeatured { get; set; }
+    public List<string>? ImageUrls { get; set; }
 }

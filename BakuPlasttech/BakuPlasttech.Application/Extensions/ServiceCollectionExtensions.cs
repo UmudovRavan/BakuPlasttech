@@ -10,8 +10,7 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        // AutoMapper
-        services.AddAutoMapper(typeof(GeneralProfile));
+        
 
         // Services
         services.AddScoped<ICategoryService, CategoryService>();
