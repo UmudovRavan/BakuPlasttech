@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const ContactMap = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="map-container">
       <img 
@@ -10,7 +13,7 @@ const ContactMap = () => {
       />
       <div className="map-overlay-badge">
         <div className="pulse-dot"></div>
-        <span className="info-content-title" style={{ fontSize: '10px', fontWeight: '800' }}>BakuPlastTech HQ</span>
+        <span className="info-content-title" style={{ fontSize: '10px', fontWeight: '800' }}>{t('contact.mapHq')}</span>
       </div>
     </div>
   );

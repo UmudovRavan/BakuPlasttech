@@ -65,6 +65,7 @@ const AdminProductsPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState('create');
   const [deleteTarget, setDeleteTarget] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [formData, setFormData] = useState(emptyForm);
 
@@ -190,6 +191,10 @@ const AdminProductsPage = () => {
     setDeleteTarget(product);
   };
 
+  const openProductDetails = (product) => {
+    setSelectedProduct(product);
+  };
+
   const confirmDeleteProduct = async () => {
     if (!deleteTarget) return;
     const productId = readValue(deleteTarget, 'id');
@@ -219,8 +224,103 @@ const AdminProductsPage = () => {
       </div>
 
       <div style={{ backgroundColor: 'transparent', width: '100%' }}>
-        <ProductsTable products={products} loading={loading} onEdit={openEditModal} onDelete={requestDeleteProduct} categoriesMap={categoriesMap} />
+        <ProductsTable
+          products={products}
+          loading={loading}
+          onEdit={openEditModal}
+          onDelete={requestDeleteProduct}
+          onView={openProductDetails}
+          categoriesMap={categoriesMap}
+        />
       </div>
+
+      {selectedProduct && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 105, backgroundColor: 'rgba(0,0,0,0.75)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '820px', maxWidth: '94vw', maxHeight: '88vh', overflowY: 'auto', backgroundColor: 'var(--color-bg-surface)', borderRadius: 'var(--radius-lg)', borderTop: '3px solid var(--color-accent)' }}>
+            <div style={{ padding: '20px', borderBottom: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h2 style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>Product Details</h2>
+              <button onClick={() => setSelectedProduct(null)} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}>
+                <X size={24} />
+              </button>
+            </div>
+            <div style={{ padding: '20px', display: 'grid', gap: '16px' }}>
+              <div style={{ color: 'white', fontWeight: 700, fontSize: '18px' }}>
+                {readValue(selectedProduct, 'nameAz') || readValue(selectedProduct, 'nameEn') || '-'}
+              </div>
+              <div style={{ color: 'var(--color-text-secondary)', fontSize: '13px' }}>
+                Slug: <span style={{ color: 'white' }}>{readValue(selectedProduct, 'slug') || '-'}</span>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Category</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>
+                    {categoriesMap[readValue(selectedProduct, 'categoryId')] || '#-'}
+                  </div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Status</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>
+                    {toBool(readValue(selectedProduct, 'isActive')) ? 'Active' : 'Inactive'}
+                  </div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Featured</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>
+                    {toBool(readValue(selectedProduct, 'isFeatured')) ? 'Yes' : 'No'}
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (AZ)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{readValue(selectedProduct, 'nameAz') || '-'}</div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (RU)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{readValue(selectedProduct, 'nameRu') || '-'}</div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (EN)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{readValue(selectedProduct, 'nameEn') || '-'}</div>
+                </div>
+              </div>
+
+              <div>
+                <div className="admin-section-heading" style={{ marginBottom: '8px' }}>Descriptions</div>
+                <div style={{ display: 'grid', gap: '8px' }}>
+                  <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px', color: 'var(--color-text-secondary)', whiteSpace: 'pre-wrap' }}>{readValue(selectedProduct, 'descriptionAz') || '-'}</div>
+                  <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px', color: 'var(--color-text-secondary)', whiteSpace: 'pre-wrap' }}>{readValue(selectedProduct, 'descriptionRu') || '-'}</div>
+                  <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px', color: 'var(--color-text-secondary)', whiteSpace: 'pre-wrap' }}>{readValue(selectedProduct, 'descriptionEn') || '-'}</div>
+                </div>
+              </div>
+
+              <div>
+                <div className="admin-section-heading" style={{ marginBottom: '8px' }}>Specifications</div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px', color: 'var(--color-text-secondary)', whiteSpace: 'pre-wrap' }}>
+                  {readValue(selectedProduct, 'specifications') || '-'}
+                </div>
+              </div>
+
+              <div>
+                <div className="admin-section-heading" style={{ marginBottom: '8px' }}>Images</div>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '10px' }}>
+                  {(readValue(selectedProduct, 'imageUrls') || []).length > 0 ? (
+                    (readValue(selectedProduct, 'imageUrls') || []).map((imageUrl, idx) => (
+                      <img key={`${imageUrl}-${idx}`} src={resolveMediaUrl(imageUrl)} alt="" style={{ width: '100%', height: '110px', objectFit: 'cover', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }} />
+                    ))
+                  ) : (
+                    <div style={{ color: 'var(--color-text-muted)', fontSize: '13px' }}>No images.</div>
+                  )}
+                </div>
+              </div>
+            </div>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'flex-end', backgroundColor: 'var(--color-bg-elevated)' }}>
+              <button type="button" onClick={() => setSelectedProduct(null)} className="admin-btn admin-btn-ghost">Close</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {isModalOpen && (
         <div style={{ position: 'fixed', inset: 0, zIndex: 100, backgroundColor: 'rgba(0,0,0,0.75)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>

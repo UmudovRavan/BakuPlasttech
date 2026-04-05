@@ -33,16 +33,20 @@
   flex-shrink: 0;
   min-width: max-content;
   text-decoration: none;
+  position: relative;
 }
 
 .logo img {
   display: block;
-  height: 44px; /* Exact height requested */
+  height: 68px;
   width: auto;
-  max-width: 240px; /* Exact max-width requested */
+  max-width: 380px;
   object-fit: contain;
   object-position: left center;
-  filter: brightness(0) invert(1); /* Ensures logo is white on dark bg */
+  image-rendering: -webkit-optimize-contrast;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.25));
+  position: relative;
+  z-index: 1;
   transition: var(--transition);
 }
 
@@ -55,13 +59,8 @@
 
 /* Filter for light mode logo - keep it visible or match navbar dark logic */
 [data-theme="light"] .logo img {
-  /* If the header background stays dark in light mode, keep the invert filter.
-     However, if the header turns white, we might need a different filter. 
-     The user requested exact filter: brightness(0) invert(1) for the navbar. */
-  filter: brightness(0) invert(1);
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.15));
 }
-
-
 
 /* 2. Navbar items (Centered) */
 .header-nav {
@@ -75,8 +74,8 @@
 
 
 .nav-item {
-  font-family: var(--font-display);
-  font-weight: 600;
+  font-family: var(--font-header);
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -138,8 +137,8 @@
 }
 
 .header-cta {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-header);
+  font-weight: 600;
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -230,8 +229,8 @@
 }
 
 .mobile-nav-item {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-header);
+  font-weight: 600;
   font-size: 32px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -276,12 +275,15 @@
 }
 
 .mobile-lang span {
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-header);
+  font-weight: 600;
   font-size: 14px;
   color: var(--color-text-muted);
   cursor: pointer;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .mobile-lang span.active {
@@ -293,8 +295,8 @@
   color: #FFFFFF;
   border: none;
   padding: 16px;
-  font-family: var(--font-display);
-  font-weight: 700;
+  font-family: var(--font-header);
+  font-weight: 600;
   letter-spacing: 2px;
   cursor: pointer;
 }
@@ -306,30 +308,87 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* Language Switcher */
-.lang-switcher-pill {
-  display: flex;
-  gap: 12px;
-  margin-right: 16px;
-  border-right: 1px solid var(--color-border);
-  padding-right: 16px;
+/* Language Dropdown */
+.lang-dropdown {
+  position: relative;
+  margin-right: 14px;
 }
 
-.lang-option {
-  cursor: pointer;
+.lang-trigger {
+  height: 36px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-family: var(--font-header);
+  font-weight: 600;
   font-size: 11px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--color-text-muted);
-  transition: var(--transition);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  cursor: pointer;
 }
 
-.lang-option:hover {
+.lang-flag {
+  width: 16px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.lang-label {
+  line-height: 1;
+}
+
+.lang-chevron {
+  transition: transform 0.2s ease;
+}
+
+.lang-dropdown.open .lang-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 120px;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1200;
+}
+
+.lang-dropdown.open .lang-menu {
+  display: block;
+}
+
+.lang-menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-header);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: left;
+}
+
+.lang-menu-item:hover,
+.lang-menu-item.active {
+  background: var(--color-bg-elevated);
   color: var(--color-accent);
-}
-
-.lang-active {
-  color: var(--color-accent) !important;
 }
 
 /* Responsive Overrides */
@@ -361,11 +420,11 @@
   }
 
   .logo img {
-    height: 32px;
-    max-width: 160px;
+    height: 52px;
+    max-width: 290px;
   }
 
-  .header-cta, .lang-switcher-pill {
+  .header-cta, .lang-dropdown {
     display: none;
   }
 }

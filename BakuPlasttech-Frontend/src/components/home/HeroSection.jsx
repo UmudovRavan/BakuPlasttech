@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 import '../../styles/hero.css';
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="hero-section">
       {/* Scroll indicator */}
@@ -22,29 +25,28 @@ const HeroSection = () => {
         </h1>
         
         <p className="hero-subtitle">
-          Pioneering industrial plastic manufacturing in Azerbaijan with high-precision 
-          engineering and internationally certified quality standards for modern architecture.
+          {t('home.hero.subtitle')}
         </p>
 
         <div className="hero-ctas">
-          <Link to="/products" className="btn-primary-rect">View Products</Link>
-          <Link to="/contact" className="btn-secondary-rect">Contact Us</Link>
+          <Link to="/products" className="btn-primary-rect">{t('home.hero.viewProducts')}</Link>
+          <Link to="/contact" className="btn-secondary-rect">{t('home.hero.contactUs')}</Link>
         </div>
 
         <div className="hero-stats">
           <div className="stat-item">
             <b>12+</b>
-            <span>Years of Expertise</span>
+            <span>{t('home.hero.yearsExpertise')}</span>
           </div>
           <div className="stat-divider"></div>
           <div className="stat-item">
             <b>500+</b>
-            <span>Products</span>
+            <span>{t('home.hero.products')}</span>
           </div>
           <div className="stat-divider"></div>
           <div className="stat-item">
             <b>1000+</b>
-            <span>Global Clients</span>
+            <span>{t('home.hero.globalClients')}</span>
           </div>
         </div>
       </div>
@@ -69,13 +71,13 @@ const HeroSection = () => {
             </svg>
           </div>
           <div className="glass-card-content">
-            <h3 className="glass-card-title">Industrial Grade Materials</h3>
-            <p className="glass-card-subtitle">ISO 9001:2015 Certified Production</p>
+            <h3 className="glass-card-title">{t('home.hero.cardTitle')}</h3>
+            <p className="glass-card-subtitle">{t('home.hero.cardSubtitle')}</p>
           </div>
           <div className="active-status">
             <div className="active-pulse">
               <span className="pulse-dot"></span>
-              <span>Active Production</span>
+              <span>{t('home.hero.activeProduction')}</span>
             </div>
           </div>
         </div>

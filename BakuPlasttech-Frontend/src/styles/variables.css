@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 /* === DARK MODE (default) === */
 :root, [data-theme="dark"] {
@@ -21,8 +21,9 @@
   --shadow-card: 0 8px 32px rgba(0,0,0,0.4);
 
   /* Shared Typography */
-  --font-display: 'Rajdhani', sans-serif;
-  --font-body: 'Nunito Sans', sans-serif;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-header: 'Inter', sans-serif;
   
   /* Layout & Misc */
   --nav-height: 64px;
@@ -51,5 +52,3 @@
   --color-stat-border: rgba(0,0,0,0.12);
   --shadow-card: 0 8px 32px rgba(0,0,0,0.12);
 }
-
-

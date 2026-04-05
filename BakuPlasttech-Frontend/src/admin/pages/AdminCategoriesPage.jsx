@@ -14,7 +14,7 @@ const emptyForm = {
 
 const getCategoryValue = (category, key) => category?.[key] ?? category?.[`${key[0].toUpperCase()}${key.slice(1)}`];
 
-const CategoryCard = ({ category, onEdit, onDelete }) => {
+const CategoryCard = ({ category, onEdit, onDelete, onView }) => {
   const categoryId = getCategoryValue(category, 'id');
   const imageUrl = resolveMediaUrl(getCategoryValue(category, 'imageUrl'));
 
@@ -26,8 +26,9 @@ const CategoryCard = ({ category, onEdit, onDelete }) => {
         borderRadius: 'var(--radius-lg)',
         overflow: 'hidden',
         transition: 'all 0.2s ease',
-        cursor: 'default',
+        cursor: 'pointer',
       }}
+      onClick={() => onView?.(category)}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = 'var(--color-border-strong)';
         e.currentTarget.style.transform = 'translateY(-2px)';
@@ -68,12 +69,12 @@ const CategoryCard = ({ category, onEdit, onDelete }) => {
             Category
           </span>
           <div style={{ display: 'flex', gap: '4px' }}>
-            <button className="admin-btn-icon" onClick={() => onEdit(category)}>
+            <button className="admin-btn-icon" onClick={(e) => { e.stopPropagation(); onEdit(category); }}>
               <Pencil size={16} />
             </button>
             <button
               className="admin-btn-icon"
-              onClick={() => onDelete(category)}
+              onClick={(e) => { e.stopPropagation(); onDelete(category); }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-danger)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-text-secondary)'; }}
             >
@@ -92,6 +93,7 @@ const AdminCategoriesPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMode, setModalMode] = useState('create');
   const [deleteTarget, setDeleteTarget] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [isSaving, setIsSaving] = useState(false);
   const [formData, setFormData] = useState(emptyForm);
 
@@ -188,6 +190,10 @@ const AdminCategoriesPage = () => {
     setDeleteTarget(category);
   };
 
+  const openCategoryDetails = (category) => {
+    setSelectedCategory(category);
+  };
+
   const confirmDeleteCategory = async () => {
     if (!deleteTarget) return;
     const categoryId = getCategoryValue(deleteTarget, 'id');
@@ -223,8 +229,59 @@ const AdminCategoriesPage = () => {
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
           {categories.map((category) => (
-            <CategoryCard key={getCategoryValue(category, 'id')} category={category} onEdit={openEditModal} onDelete={requestDeleteCategory} />
+            <CategoryCard
+              key={getCategoryValue(category, 'id')}
+              category={category}
+              onEdit={openEditModal}
+              onDelete={requestDeleteCategory}
+              onView={openCategoryDetails}
+            />
           ))}
+        </div>
+      )}
+
+      {selectedCategory && (
+        <div style={{ position: 'fixed', inset: 0, zIndex: 70, backgroundColor: 'rgba(0,0,0,0.75)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: '560px', maxWidth: '92vw', backgroundColor: 'var(--color-bg-surface)', borderRadius: 'var(--radius-lg)', borderTop: '3px solid var(--color-accent)' }}>
+            <div style={{ padding: '20px', borderBottom: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h2 style={{ color: 'white', fontSize: '18px', fontWeight: '600' }}>Category Details</h2>
+              <button onClick={() => setSelectedCategory(null)} style={{ background: 'transparent', border: 'none', color: 'white', cursor: 'pointer' }}>
+                <X size={24} />
+              </button>
+            </div>
+            <div style={{ padding: '20px', display: 'grid', gap: '14px' }}>
+              {resolveMediaUrl(getCategoryValue(selectedCategory, 'imageUrl')) ? (
+                <img
+                  src={resolveMediaUrl(getCategoryValue(selectedCategory, 'imageUrl'))}
+                  alt=""
+                  style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}
+                />
+              ) : null}
+              <div style={{ color: 'white', fontWeight: 700, fontSize: '18px' }}>
+                {getCategoryValue(selectedCategory, 'nameAz') || getCategoryValue(selectedCategory, 'nameEn')}
+              </div>
+              <div style={{ color: 'var(--color-text-secondary)', fontSize: '13px' }}>
+                Slug: <span style={{ color: 'white' }}>{getCategoryValue(selectedCategory, 'slug') || '-'}</span>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (AZ)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{getCategoryValue(selectedCategory, 'nameAz') || '-'}</div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (RU)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{getCategoryValue(selectedCategory, 'nameRu') || '-'}</div>
+                </div>
+                <div style={{ background: 'var(--color-bg-elevated)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '10px' }}>
+                  <div className="admin-muted-label">Name (EN)</div>
+                  <div style={{ color: 'white', marginTop: '4px' }}>{getCategoryValue(selectedCategory, 'nameEn') || '-'}</div>
+                </div>
+              </div>
+            </div>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'flex-end', backgroundColor: 'var(--color-bg-elevated)' }}>
+              <button type="button" onClick={() => setSelectedCategory(null)} className="admin-btn admin-btn-ghost">Close</button>
+            </div>
+          </div>
         </div>
       )}
 

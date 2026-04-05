@@ -2,7 +2,7 @@ import React from 'react';
 import { ImageOff, Star, Pencil, Trash2 } from 'lucide-react';
 import { resolveMediaUrl } from '../../utils/mediaUrl';
 
-const ProductsTable = ({ products, loading, onEdit, onDelete, categoriesMap = {} }) => {
+const ProductsTable = ({ products, loading, onEdit, onDelete, onView, categoriesMap = {} }) => {
   if (loading) {
     return <div style={{ padding: '32px', textAlign: 'center', color: 'var(--color-text-secondary)' }}>Loading...</div>;
   }
@@ -38,7 +38,8 @@ const ProductsTable = ({ products, loading, onEdit, onDelete, categoriesMap = {}
           return (
             <tr
               key={productId}
-              style={{ borderBottom: '1px solid var(--color-border)', height: '64px' }}
+              style={{ borderBottom: '1px solid var(--color-border)', height: '64px', cursor: 'pointer' }}
+              onClick={() => onView?.(product)}
               onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = 'var(--color-bg-elevated)'; }}
               onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
             >
@@ -72,13 +73,13 @@ const ProductsTable = ({ products, loading, onEdit, onDelete, categoriesMap = {}
               </td>
               <td style={{ padding: '0 20px', textAlign: 'right' }}>
                 <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
-                  <button className="admin-btn-icon" style={{ color: 'var(--color-text-secondary)' }} onClick={() => onEdit?.(product)}>
+                  <button className="admin-btn-icon" style={{ color: 'var(--color-text-secondary)' }} onClick={(e) => { e.stopPropagation(); onEdit?.(product); }}>
                     <Pencil size={18} />
                   </button>
                   <button
                     className="admin-btn-icon"
                     style={{ color: 'var(--color-text-secondary)' }}
-                    onClick={() => onDelete?.(product)}
+                    onClick={(e) => { e.stopPropagation(); onDelete?.(product); }}
                     onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-danger)'; e.currentTarget.style.backgroundColor = 'var(--color-accent-muted)'; }}
                     onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-text-secondary)'; e.currentTarget.style.backgroundColor = 'var(--color-bg-hover)'; }}
                   >

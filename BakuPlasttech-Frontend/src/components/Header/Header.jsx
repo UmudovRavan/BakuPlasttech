@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
-import { Sun, Moon, ArrowRight, X } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
+import { Sun, Moon, ArrowRight, ChevronDown } from 'lucide-react';
 import logo from './logo/BakuPlasttechLogo.png';
 import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeLang, setActiveLang] = useState('EN');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
@@ -23,6 +25,7 @@ const Header = () => {
   // Close mobile menu when location changes
   useEffect(() => {
     setMobileMenuOpen(false);
+    setLangDropdownOpen(false);
   }, [location.pathname]);
 
   // Disable body scroll when mobile menu is open
@@ -38,11 +41,17 @@ const Header = () => {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Products', path: '/products' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.products'), path: '/products' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.contact'), path: '/contact' },
   ];
+
+  const languageOptions = [
+    { code: 'az', label: 'AZE', flag: 'https://flagcdn.com/w20/az.png' },
+    { code: 'en', label: 'ENG', flag: 'https://flagcdn.com/w20/gb.png' },
+  ];
+  const activeLanguageOption = languageOptions.find((item) => item.code === language) || languageOptions[1];
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -72,17 +81,35 @@ const Header = () => {
 
         {/* 3. CTA ACTIONS */}
         <div className="header-actions">
-          {/* Language Switcher */}
-          <div className="lang-switcher-pill">
-            {['AZ', 'RU', 'EN'].map((lang) => (
-              <span 
-                key={lang} 
-                className={`lang-option ${activeLang === lang ? 'lang-active' : ''}`}
-                onClick={() => setActiveLang(lang)}
-              >
-                {lang}
-              </span>
-            ))}
+          {/* Language Dropdown */}
+          <div className={`lang-dropdown ${langDropdownOpen ? 'open' : ''}`}>
+            <button
+              className="lang-trigger"
+              onClick={() => setLangDropdownOpen((prev) => !prev)}
+              aria-label="Language"
+              type="button"
+            >
+              <img className="lang-flag" src={activeLanguageOption.flag} alt={activeLanguageOption.label} />
+              <span className="lang-label">{activeLanguageOption.label}</span>
+              <ChevronDown size={14} className="lang-chevron" />
+            </button>
+
+            <div className="lang-menu">
+              {languageOptions.map((item) => (
+                <button
+                  key={item.code}
+                  className={`lang-menu-item ${language === item.code ? 'active' : ''}`}
+                  onClick={() => {
+                    setLanguage(item.code);
+                    setLangDropdownOpen(false);
+                  }}
+                  type="button"
+                >
+                  <img className="lang-flag" src={item.flag} alt={item.label} />
+                  <span>{item.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Theme Toggle */}
@@ -92,7 +119,7 @@ const Header = () => {
 
           {/* Quote Button */}
           <button className="header-cta">
-            <span>GET A QUOTE</span>
+            <span>{t('nav.getQuote')}</span>
             <ArrowRight size={14} style={{ marginLeft: '8px' }} />
           </button>
 
@@ -127,17 +154,17 @@ const Header = () => {
           
           <div className="mobile-nav-footer">
              <div className="mobile-lang">
-               {['AZ', 'RU', 'EN'].map((lang) => (
-                 <span 
-                   key={lang} 
-                   className={activeLang === lang ? 'active' : ''}
-                   onClick={() => setActiveLang(lang)}
+               {languageOptions.map((item) => (
+                 <span
+                   key={item.code}
+                   className={language === item.code ? 'active' : ''}
+                   onClick={() => setLanguage(item.code)}
                  >
-                   {lang}
+                   <img className="lang-flag" src={item.flag} alt={item.label} /> {item.label}
                  </span>
                ))}
              </div>
-             <button className="mobile-cta-btn">GET A QUOTE</button>
+             <button className="mobile-cta-btn">{t('nav.getQuote')}</button>
           </div>
         </div>
       </div>

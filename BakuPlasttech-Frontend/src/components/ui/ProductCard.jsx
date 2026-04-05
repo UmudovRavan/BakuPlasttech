@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../styles/home.css';
 
 const ProductCard = ({ product }) => {
   const { title, category, image, icon } = product;
+  const detailPath = product?.slug ? `/products/${product.slug}` : '/products';
 
   return (
-    <div className="product-card">
+    <Link to={detailPath} className="product-card">
       <div className="product-card-image">
         <img src={image} alt={title} />
       </div>
@@ -16,7 +18,7 @@ const ProductCard = ({ product }) => {
         </div>
         {icon && <span className="material-symbols-outlined product-card-icon">{icon}</span>}
       </div>
-    </div>
+    </Link>
   );
 };
 

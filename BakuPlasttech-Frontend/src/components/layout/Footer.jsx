@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 import logo from '../../assets/logo/BakuPlasttechLogo.png';
 import '../../styles/footer.css';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="container">
@@ -12,32 +15,29 @@ const Footer = () => {
             <Link to="/">
               <img src={logo} alt="BakuPlastTech" className="footer-logo-img" />
             </Link>
-            <p className="footer-tagline">
-              Engineering Precision. Leading manufacturer of 
-              high-performance plastic construction materials in the region.
-            </p>
+            <p className="footer-tagline">{t('footer.tagline')}</p>
           </div>
-          
+
           <div className="footer-column">
-            <h4 className="footer-title">Solutions</h4>
+            <h4 className="footer-title">{t('footer.solutions')}</h4>
             <ul className="footer-links">
-              <li><Link to="/products" className="footer-link">Products</Link></li>
-              <li><Link to="/products" className="footer-link">Technical Specs</Link></li>
-              <li><Link to="/" className="footer-link">Certifications</Link></li>
+              <li><Link to="/products" className="footer-link">{t('nav.products')}</Link></li>
+              <li><Link to="/products" className="footer-link">{t('footer.technicalSpecs')}</Link></li>
+              <li><Link to="/" className="footer-link">{t('footer.certifications')}</Link></li>
             </ul>
           </div>
-          
+
           <div className="footer-column">
-            <h4 className="footer-title">Company</h4>
+            <h4 className="footer-title">{t('footer.company')}</h4>
             <ul className="footer-links">
-              <li><Link to="/" className="footer-link">Privacy Policy</Link></li>
-              <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-              <li><Link to="/" className="footer-link">Careers</Link></li>
+              <li><Link to="/" className="footer-link">{t('footer.privacy')}</Link></li>
+              <li><Link to="/contact" className="footer-link">{t('footer.contactUs')}</Link></li>
+              <li><Link to="/" className="footer-link">{t('footer.careers')}</Link></li>
             </ul>
           </div>
-          
+
           <div className="footer-column">
-            <h4 className="footer-title">Headquarters</h4>
+            <h4 className="footer-title">{t('footer.hq')}</h4>
             <div className="footer-contact">
               <p>Industrial Zone, Phase II</p>
               <p>Baku, Azerbaijan</p>
@@ -45,9 +45,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
-          <p className="copyright">© 2024 BakuPlastTech. Engineering Precision.</p>
+          <p className="copyright">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>
